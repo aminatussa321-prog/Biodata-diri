@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Data Diri | Cloud Profile</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;font-family:Arial, sans-serif;color:#24415f;
+      background:linear-gradient(180deg,#79c9f5 0%,#c7eaff 55%,#f4fbff 100%);
+      overflow-x:hidden;
+    }
+    .sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+    .cloud{position:absolute;width:150px;height:48px;background:#fff;border-radius:50px;opacity:.85;
+      filter:drop-shadow(0 8px 8px #5b9fc455);animation:float 28s linear infinite}
+    .cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+    .cloud:before{width:65px;height:65px;left:22px;top:-32px}
+    .cloud:after{width:82px;height:82px;right:18px;top:-43px}
+    .c1{top:12%;left:-180px;animation-duration:34s}
+    .c2{top:35%;left:-200px;transform:scale(.7);animation-duration:42s;animation-delay:-12s}
+    .c3{top:70%;left:-190px;transform:scale(1.15);animation-duration:38s;animation-delay:-22s}
+    @keyframes float{from{translate:0 0}to{translate:calc(100vw + 400px) 0}}
+    .wrap{position:relative;z-index:1;width:min(900px,92%);margin:38px auto;padding-bottom:35px}
+    header{text-align:center;color:#fff;padding:30px 15px 24px;text-shadow:0 2px 8px #367ca8}
+    header h1{font-size:clamp(2rem,6vw,3.2rem);margin-bottom:8px}
+    header p{font-size:1rem;letter-spacing:1px}
+    .card{background:#ffffffdf;backdrop-filter:blur(10px);border:1px solid #fff;
+      border-radius:25px;padding:28px;box-shadow:0 15px 40px #367ca833}
+    .profile{text-align:center;margin-bottom:25px}
+    .avatar{width:125px;height:125px;border-radius:50%;object-fit:cover;border:5px solid #fff;
+      box-shadow:0 5px 18px #3a8fc455;background:#d9f1ff}
+    .profile h2{margin-top:12px;color:#23618a;font-size:1.65rem}
+    .profile p{margin-top:5px;color:#62829b}
+    .section{margin-top:22px}
+    .section h3{color:#2878a7;margin-bottom:12px;font-size:1.15rem}
+    .data{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .item{background:#eff9ff;border:1px solid #d8efff;border-radius:13px;padding:13px}
+    .item small{display:block;color:#6b91aa;margin-bottom:5px}
+    .item strong{font-weight:600;overflow-wrap:anywhere}
+    .about{line-height:1.7;background:#eff9ff;padding:16px;border-radius:14px}
+    .social{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .social a{color:#fff;background:#459bc9;text-decoration:none;padding:10px 16px;border-radius:30px}
+    .social a:hover{background:#267eaf}
+    footer{text-align:center;color:#fff;margin-top:20px;text-shadow:0 1px 5px #367ca8;font-size:.9rem}
+    @media(max-width:600px){.wrap{margin:18px auto}.card{padding:20px}.data{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+  </div>
+  <main class="wrap">
+    <header>
+      <h1>My Bio Data</h1>
+      <p>Kenali aku lebih dekat ☁️</p>
+    </header>
+
+    <section class="card">
+      <div class="profile">
+        <!-- Ganti foto-profil.jpg dengan nama file fotomu -->
+        <img class="avatar" src="foto-profil.jpg" alt="Foto profil"
+             onerror="this.src='https://placehold.co/300x300/d9f1ff/397da5?text=Your+Photo'">
+        <h2>Nama Lengkap Kamu</h2>
+        <p>Pelajar | Pribadi yang terus belajar dan berkembang</p>
+      </div>
+
+      <div class="section">
+        <h3>☁️ Biodata Diri</h3>
+        <div class="data">
+          <div class="item"><small>Nama lengkap</small><strong>Nama kamu</strong></div>
+          <div class="item"><small>Tempat, tanggal lahir</small><strong>Kota, tanggal lahir</strong></div>
+          <div class="item"><small>Jenis kelamin</small><strong>Isi di sini</strong></div>
+          <div class="item"><small>Alamat</small><strong>Alamat kamu</strong></div>
+          <div class="item"><small>Sekolah</small><strong>Nama sekolah</strong></div>
+          <div class="item"><small>Hobi</small><strong>Hobi kamu</strong></div>
+          <div class="item"><small>Email</small><strong>emailkamu@example.com</strong></div>
+          <div class="item"><small>Cita-cita</small><strong>Cita-cita kamu</strong></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>🌤️ Tentang Saya</h3>
+        <p class="about">Halo! Saya adalah seseorang yang suka belajar hal baru, mencoba pengalaman,
+          dan mengembangkan kemampuan diri. Saya percaya bahwa setiap hari adalah kesempatan
+          untuk menjadi lebih baik.</p>
+      </div>
+
+      <div class="section">
+        <h3>🌈 Media Sosial</h3>
+        <p>Tambahkan tautan media sosialmu di bawah ini.</p>
+        <div class="social">
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </section>
+    <footer>© 2026 • Dibuat dengan ☁️ dan semangat</footer>
+  </main>
+</body>
+</html>
